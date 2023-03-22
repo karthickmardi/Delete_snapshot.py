@@ -3,7 +3,14 @@ import sys
 import datetime
 import pytz
 # Set up the EC2 client
-ec2 = boto3.client('ec2')
+
+
+region = sys.argv[2]
+access_key = sys.argv[3]
+secret_key = sys.argv[4]
+
+ec2 = boto3.client('ec2', region_name=region ,aws_access_key_id=access_key,
+    aws_secret_access_key=secret_key)
 
 utc=pytz.UTC
 #delete_inst = sys.argv[1] #delete time
