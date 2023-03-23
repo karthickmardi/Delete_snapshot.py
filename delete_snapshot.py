@@ -1,5 +1,7 @@
-import boto3
 import sys
+sys.path.append('/usr/lib/python2.7')
+
+import boto3
 import datetime
 import pytz
 # Set up the EC2 client
