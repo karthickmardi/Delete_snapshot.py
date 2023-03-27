@@ -5,7 +5,7 @@ import pytz
 import logging
 # Set up the EC2 client
 
-
+asd
 region = sys.argv[2]
 access_key = sys.argv[3]
 secret_key = sys.argv[4]
