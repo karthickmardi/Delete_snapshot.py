@@ -25,8 +25,6 @@ owner_id = sys.argv[1]
 # Get a list of all snapshots with the specified tag
 
 response = ec2.describe_snapshots(OwnerIds=[owner_id])
-logging.warning(response)
-print(response)
 
 # Extract the snapshot IDs from the response
 #snapshot_ids = [snapshot['SnapshotId'] for snapshot in response['Snapshots']]
