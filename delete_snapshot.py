@@ -2,6 +2,7 @@ import sys
 import boto3
 import datetime
 import pytz
+import logging
 # Set up the EC2 client
 
 
@@ -24,7 +25,7 @@ owner_id = sys.argv[1]
 # Get a list of all snapshots with the specified tag
 
 response = ec2.describe_snapshots(OwnerIds=[owner_id])
-#print(response)
+logging.info(response)
 
 # Extract the snapshot IDs from the response
 #snapshot_ids = [snapshot['SnapshotId'] for snapshot in response['Snapshots']]
