@@ -16,7 +16,7 @@ utc=pytz.UTC
 #delete_inst = sys.argv[1] #delete time
 
 # Define the tag key and value to search for
-tag_key = 'Retention Period'
+tag_key = 'Retention_Period'
 #tag_value = '5'
 
 # Get a list of all snapshots with the specified tag
@@ -33,7 +33,7 @@ for snapshot in response['Snapshots']:
     retention = ''
     if snapshot.get('Tags', False):
         for tag in snapshot['Tags']:
-            if tag['Key'] == 'Retention Period':
+            if tag['Key'] == 'Retention_Period':
                 retention = int(tag['Value'])
                 break
     else:
