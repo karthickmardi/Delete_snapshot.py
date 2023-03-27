@@ -26,8 +26,8 @@ owner_id = sys.argv[1]
 
 response = ec2.describe_snapshots(OwnerIds=[owner_id])
 
-with open('test.txt' 'wb') as t:
-    t.write(response)
+with open('testing.txt' 'wb') as t:
+    t.write(str(response))
 # Extract the snapshot IDs from the response
 #snapshot_ids = [snapshot['SnapshotId'] for snapshot in response['Snapshots']]
 
