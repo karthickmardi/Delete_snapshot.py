@@ -11,8 +11,7 @@ region = sys.argv[2]
 #access_key = sys.argv[3]
 #secret_key = sys.argv[4]
 
-ec2 = boto3.client('ec2', region_name=region ,aws_access_key_id=access_key,
-    aws_secret_access_key=secret_key)
+ec2 = boto3.client('ec2', region_name=region)
 
 utc=pytz.UTC
 #delete_inst = sys.argv[1] #delete time
