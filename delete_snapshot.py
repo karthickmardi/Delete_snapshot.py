@@ -29,7 +29,7 @@ response = ec2.describe_snapshots(OwnerIds=[owner_id])
 # Extract the snapshot IDs from the response
 #snapshot_ids = [snapshot['SnapshotId'] for snapshot in response['Snapshots']]
 
-for snapshot in response['Snapshot']:
+for snapshot in response['Snapshots']:
     retention = ''
     if snapshot.get('Tags', False):
         for tag in snapshot['Tags']:
