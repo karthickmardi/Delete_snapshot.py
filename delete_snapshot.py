@@ -8,8 +8,8 @@ import logging
 # Set up the EC2 client
 
 region = sys.argv[2]
-#access_key = sys.argv[3]
-#secret_key = sys.argv[4]
+access_key = sys.argv[3]
+secret_key = sys.argv[4]
 
 ec2 = boto3.client('ec2', region_name=region)
 
