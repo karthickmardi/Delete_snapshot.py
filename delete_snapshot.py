@@ -25,7 +25,7 @@ tag_key = 'Retention_Period'
 owner_id = sys.argv[1]
 # Get a list of all snapshots with the specified tag
 
-response = ec2 describe-snapshots(OwnerIds=[owner_id])
+response = ec2.describe-snapshots(OwnerIds=[owner_id])
 
 # Extract the snapshot IDs from the response
 #snapshot_ids = [snapshot['SnapshotId'] for snapshot in response['Snapshots']]
